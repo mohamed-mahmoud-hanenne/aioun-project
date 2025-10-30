@@ -1,14 +1,49 @@
-.card img {
+/* ✅ Section principale */
+.tour-section {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tour-section:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ✅ Image principale (grande et immersive) */
+.tour-main-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-bottom: 4px solid #198754;
+}
+
+/* ✅ Galerie d’images secondaires */
+.tour-sub-img {
+  width: 30%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.25s ease;
+}
+.tour-sub-img:hover {
+  transform: scale(1.05);
+}
+
+/* ✅ Responsive design */
+@media (max-width: 992px) {
+  .tour-main-img {
+    height: 300px;
+  }
+  .tour-sub-img {
+    width: 45%;
+    height: 120px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tour-main-img {
     height: 220px;
-    object-fit: cover;
-    cursor: pointer;
   }
-  
-  h2 {
-    font-family: 'Tajawal', sans-serif;
+  .tour-sub-img {
+    width: 90%;
+    height: 140px;
   }
-  
-  p {
-    line-height: 1.8;
-  }
-  
+}
